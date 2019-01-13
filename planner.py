@@ -20,21 +20,25 @@ def month_dates2(year, month):
             yield d if d else ''
 
 
-@app.route('/2019')
-def year():
-    current = 2019
+def year(y):
     with app.app_context():
         return render_template('year.html', \
-            title = "2019 Year Planner", \
+            year = y,
+            title = "Year Planner", \
             weekdays = calendar.day_abbr,
             months = calendar.month_abbr,
             dates = month_dates,
         )
 
 
+@app.route('/<int:yr>' )
+def indexed_year(yr):
+    return year(yr)
+
+
 @app.route('/')
 def index():
-    return year()
+    return year(2019)
 
 
 # https://markhneedham.com/blog/2017/04/27/python-flask-generating-a-static-html-page/

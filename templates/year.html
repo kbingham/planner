@@ -2,11 +2,11 @@
 <!doctype html>
 <html>
   <head>
-	<title>{{ title }}</title>
+	<title>{{ (year, title)|join(" ") }}</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='year.css') }}">
   </head>
   <body>
-	<h1>{{ title }}</h1>
+	<h1>{{ (year, title)|join(" ") }}</h1>
 
   <div class="month">
     <div class="week-day month-label"></div>
@@ -16,7 +16,7 @@
 
   {% for m in range(1,13) %}<div class="month">
     <div class="week-day month-label">{{ months[m] }}</div>
-    {% for i in dates(2019, m) %}<div class="week-day">{{ i }}</div>
+    {% for i in dates(year, m) %}<div class="week-day">{{ i }}</div>
     {% endfor %}
   </div>
 
