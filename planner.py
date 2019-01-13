@@ -6,8 +6,10 @@ from flask import Flask, render_template
 app = Flask(__name__)
 cal = calendar.Calendar()
 
+# itermonthdays generates data after the last date in the month.
+# Prevent this by converting the generator to a list, and splicing it.
 def month_dates(year, month):
-    for d in cal.itermonthdays(year, month):
+    for d in list(cal.itermonthdays(year, month))[:37]:
         yield d if d else ''
 
 
