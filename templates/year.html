@@ -20,8 +20,8 @@
     {% endfor %}
   </div>
 
-  {% for m in months %}<div class="month">
-    <div class="week-day month-label">{{ m }}</div>
+  {% for m in range(1,13) %}<div class="month">
+    <div class="week-day month-label">{{ months[m] }}</div>
     {% for i in range(1, 38) %}<div class="week-day">{{ i }}</div>
     {% endfor %}
   </div>

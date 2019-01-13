@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import calendar
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -12,7 +13,7 @@ def year():
         return render_template('year.html', \
             title = "2019 Year Planner", \
             weekdays = [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ],
-            months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+            months = calendar.month_abbr,
         )
 
 
