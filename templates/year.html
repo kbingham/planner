@@ -3,13 +3,29 @@
 <html>
   <head>
 	<title>{{ title }}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='year.css') }}">
   </head>
   <body>
 	<h1>{{ title }}</h1>
-  <ul>
-  {% for person in people %}
-    <li>{{ person.name }}</li>
+
+  <div class="month">
+    <div class="week-day month-label"></div>
+    {% for i in range(37) %}<div class="week-day">{{ weekdays[i%7] }}</div>
+    {% endfor %}
+  </div>
+
+  <div class="month">
+    <div class="week-day month-label"></div>
+    {% for i in range(37) %}<div class="week-day">{{ i }}</div>
+    {% endfor %}
+  </div>
+
+  {% for m in months %}<div class="month">
+    <div class="week-day month-label">{{ m }}</div>
+    {% for i in range(36) %}<div class="week-day"></div>{% endfor %}
+  </div>
+
   {% endfor %}
-  </ul>
+
   </body>
 </html>
