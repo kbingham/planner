@@ -12,7 +12,7 @@ def year():
     with app.app_context():
         return render_template('year.html', \
             title = "2019 Year Planner", \
-            weekdays = [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ],
+            weekdays = calendar.day_abbr,
             months = calendar.month_abbr,
         )
 
