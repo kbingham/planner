@@ -10,7 +10,7 @@ def year():
     current = 2019
     with app.app_context():
         return render_template('year.html', \
-            title = "2019", \
+            title = "2019 Year Planner", \
             weekdays = [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ],
             months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
         )
