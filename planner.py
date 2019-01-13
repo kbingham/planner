@@ -4,6 +4,18 @@ import calendar
 from flask import Flask, render_template
 
 app = Flask(__name__)
+cal = calendar.Calendar()
+
+def month_dates(year, month):
+    for d in cal.itermonthdays(year, month):
+        yield d if d else ''
+
+
+def month_dates2(year, month):
+    m = calendar.monthcalendar(year, month)
+    for w in m:
+        for d in w:
+            yield d if d else ''
 
 
 @app.route('/2019')
@@ -14,6 +26,7 @@ def year():
             title = "2019 Year Planner", \
             weekdays = calendar.day_abbr,
             months = calendar.month_abbr,
+            dates = month_dates,
         )
 
 
