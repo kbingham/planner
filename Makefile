@@ -10,3 +10,6 @@ open:
 
 debug: DEBUG=FLASK_DEBUG=1
 debug: run
+
+heroku-logs:
+	heroku logs --tail
