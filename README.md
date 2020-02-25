@@ -13,7 +13,17 @@ CSS Grid Example
  - Other referenced codepen
  - https://codepen.io/thefinley/pen/pdYdZN
 
+More calender (and monopoly) grid layouts:
+ - https://css-tricks.com/snippets/css/css-grid-starter-layouts/
 
 Heroku Hosted Example:
  - https://kbingham-planner.herokuapp.com/
 
+REALLY relevant spreadsheet examples:
+ - https://css-tricks.com/idea-simple-responsive-spreadsheet/
+
+and an impressive 'Excel' CSS demo
+ - https://codepen.io/oliviale/pen/rPjgmB
+
+A nice demo of dense/grid-auto placements:
+ - https://webdesign.tutsplus.com/tutorials/understanding-the-css-grid-auto-placement-algorithm--cms-27563
